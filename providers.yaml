@@ -1,0 +1,11 @@
+ics:
+  - name: "Compassionate Friends – Tucson (example)"
+    url: "https://calendar.google.com/calendar/ical/en.usa%23holiday%40group.v.calendar.google.com/public/basic.ics"
+    city: "Tucson"
+    state: "AZ"
+
+jsonld:
+  - name: "Local Hospice Events (example)"
+    url: "https://www.example-hospice.org/events"
+    city: "Phoenix"
+    state: "AZ"
