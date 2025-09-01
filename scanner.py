@@ -4,9 +4,10 @@ from dateutil import parser as dateparser
 from bs4 import BeautifulSoup
 from icalendar import Calendar
 
-BACKEND = os.getenv("BACKEND_API_URL", "").rstrip("/")
-ADMIN_TOKEN = os.getenv("ADMIN_TOKEN")
-HEADERS = {"Authorization": f"Bearer {ADMIN_TOKEN}"} if ADMIN_TOKEN else {}
+BACKEND = os.getenv("BACKEND_API_URL", "").strip()
+if BACKEND and not BACKEND.startswith(("http://", "https://")):
+    BACKEND = "https://" + BACKEND
+BACKEND = BACKEND.rstrip("/")
 
 def to_iso(dt):
     if isinstance(dt, datetime):
